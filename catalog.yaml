@@ -27,9 +27,7 @@ spec:
     openapi: "3.0.0"
     info:
       version: 1.0.0
-      title: Artist API
-      license:
-        name: MIT
+      title: ENS API
     servers:
       - url: http://euw1-ap-pe-ws5-srv-nlb-ens-u-ac6172d063d0dea7.elb.eu-west-1.amazonaws.com
     paths:
