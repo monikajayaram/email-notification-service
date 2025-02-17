@@ -12,7 +12,7 @@ spec:
   providesApis:
     - ens-api
   apiConsumedBy:
-    - sens-api
+    - api:sens-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
