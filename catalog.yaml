@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: email-notification-service
+  description: Email Notification Service is an API Service based on Java, Spring Boot.
+  tags:
+    - java
+spec:
+  type: service
+  owner: guests
+  lifecycle: production
+  providesApis:
+    - ens-api
+  apiConsumedBy:
+    - sens-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ens-api
+  description: apis to send emails
+spec:
+  type: openapi
+  lifecycle: production
+  owner: guests
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://euw1-ap-pe-ws5-srv-nlb-ens-u-ac6172d063d0dea7.elb.eu-west-1.amazonaws.com
+    paths:
+      /emails:
+        post:
+          summary: send email
