@@ -12,7 +12,7 @@ spec:
   providesApis:
     - ens-api
   apiConsumedBy:
-    - api:sens-api
+    - component:submission-events-notification-service
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
